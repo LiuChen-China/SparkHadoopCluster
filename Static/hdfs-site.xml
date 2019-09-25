@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+    <configuration>
+        <property>
+                <name>dfs.namenode.secondary.http-address</name>
+                <value>master:50090</value>
+                <description>secondary namenode HTTP服务器地址和端口。</description>
+        </property>
+        <property>
+            <name>dfs.replication</name>
+            <value>1</value>
+            <description>数据备份量</description>
+        </property>
+        <property>
+            <name>dfs.namenode.name.dir</name>
+            <value>file:/srv/hadoop/tmp/dfs/name</value>
+            <description>存放namenode的名称表（fsimage）的目录，如果这是一个逗号分隔的目录列表，那么在所有目录中复制名称表，用于冗余。</description>
+        </property>
+        <property>
+            <name>dfs.datanode.data.dir</name>
+            <value>file:/srv/hadoop/tmp/dfs/data</value>
+            <description>存放datanode块的目录。如果这是一个逗号分隔的目录列表，那么数据将存储在所有命名的目录中，通常存储在不同的设备上。</description>
+        </property>
+    </configuration>
+</configuration>
